@@ -4,10 +4,23 @@ Ruby Download helper that can handle even big file downloads too
 
 ## Use case
 
+auth less use case
+
 ```ruby
 
   require 'download'
   Download.file(uri_path,target_local_file_path)
+
+```
+
+with basic auth
+
+```ruby
+
+  Download.file(
+    'http://www.example.com/something.zip',
+    http_basic_authentication: ['username', '123abc']
+  )
 
 ```
 
